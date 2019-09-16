@@ -194,7 +194,7 @@
 		data["sourceName"] = genetics.display_name
 		if(!genetics.roundstart)
 			data["sourceName"] += " (variety #[genetics.uid])"
-		if ( !degradation )
+		if ( genetics.chems && !degradation )
 			for ( i = 1, i<= genetics.chems.len, i++ )
 				chem_list += genetics.chems[i]
 			data["show_chems"] = chem_list.len > 0 ? 1 : 0
